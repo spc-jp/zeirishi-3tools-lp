@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>税理士事務所のための3つの相棒｜顧問先サポート三種の神器｜Smile Plus Consulting</title>
+<meta name="description" content="数字を、経営助言に変える3つの相棒。試算みっけ・資金繰りシミュレーター・経営健康診断アプリで月次面談を3倍深く。">
+<meta property="og:title" content="数字を、経営助言に変える3つの相棒｜税理士事務所向け">
+<meta property="og:description" content="「特に問題ありません」では、もう通用しない時代へ。AIが先生の経営助言力を3倍にします。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://spc-jp.github.io/zeirishi-3tools/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="https://spc-jp.github.io/mikke-catalog/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="https://spc-jp.github.io/mikke-catalog/favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #223670;
+    --navy-dark: #182550;
+    --navy-light: #2d4490;
+    --gold: #D0A900;
+    --gold-light: #f0c800;
+    --gold-soft: #fff8d6;
+    --white: #ffffff;
+    --bg: #f5f6fa;
+    --bg-warm: #faf8f0;
+    --text: #1a1a1a;
+    --text-light: #555;
+    --text-soft: #888;
+    --border: #e5e7eb;
+    --shadow-sm: 0 2px 8px rgba(34,54,112,0.08);
+    --shadow-md: 0 4px 20px rgba(34,54,112,0.12);
+    --shadow-lg: 0 8px 40px rgba(34,54,112,0.18);
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+    color: var(--white);
+    padding: 80px 20px 90px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(208,169,0,0.18) 0%, rgba(208,169,0,0) 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(208,169,0,0.10) 0%, rgba(208,169,0,0) 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; }
+  .hero-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 6px 18px;
+    border-radius: 24px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(26px, 5.5vw, 44px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 22px;
+    letter-spacing: 0.02em;
+  }
+  .hero h1 .accent { color: var(--gold); }
+  .hero h1 .small { display: block; font-size: 0.6em; color: var(--gold-light); margin-top: 12px; letter-spacing: 0.18em; font-weight: 500; }
+  .hero-lead {
+    font-size: clamp(14px, 2.2vw, 17px);
+    opacity: 0.9;
+    line-height: 1.9;
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.04em;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy-dark);
+    box-shadow: 0 4px 16px rgba(208,169,0,0.4);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(208,169,0,0.55); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.6);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+  .hero-trust {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .trust-item {
+    font-size: 12px;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .trust-item::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+  /* ===== SECTION COMMON ===== */
+  section { padding: 80px 20px; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .section-subtitle {
+    font-size: 15px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ===== PROBLEM SECTION ===== */
+  .problem { background: var(--white); }
+  .scenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+  }
+  .scene-card {
+    background: var(--bg-warm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 26px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .scene-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .scene-num {
+    position: absolute;
+    top: -16px;
+    left: 26px;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.1em;
+  }
+  .scene-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 8px 0 18px;
+  }
+  .dialogue { display: flex; flex-direction: column; gap: 10px; }
+  .speech {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    border-left: 3px solid var(--gold);
+  }
+  .speech-name {
+    display: block;
+    font-size: 11px;
+    color: var(--text-soft);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .speech.inner-thought {
+    background: #fef9f3;
+    border-left-color: var(--text-soft);
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  .problem-conclusion {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: var(--white);
+    padding: 36px 32px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+  .problem-conclusion p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(16px, 2.6vw, 20px);
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  .problem-conclusion .highlight { color: var(--gold); font-weight: 700; }
+
+  /* ===== STORY ARROW ===== */
+  .story-flow {
+    background: var(--bg-warm);
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .flow-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .flow-step {
+    background: var(--white);
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 18px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+  .flow-step .step-num {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 900;
+  }
+  .flow-arrow { color: var(--gold); font-size: 24px; font-weight: 700; }
+
+  /* ===== TOOLS SECTION ===== */
+  .tools { background: var(--white); }
+  .tool-card {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 40px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
+  .tool-card:nth-child(even) { grid-template-columns: 1.4fr 1fr; }
+  .tool-card:nth-child(even) .tool-visual { order: 2; }
+  .tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px; height: 100%;
+    background: var(--gold);
+  }
+  .tool-visual {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: var(--radius);
+    padding: 40px 30px;
+    color: var(--white);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+  .tool-icon {
+    font-size: 56px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .tool-role {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+  }
+  .tool-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  .tool-tagline {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.7;
+  }
+  .tool-content .tool-eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin-bottom: 10px;
+  }
+  .tool-content h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(20px, 3vw, 26px);
+    color: var(--navy);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .feature-list {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .feature-list li {
+    padding: 12px 0 12px 32px;
+    position: relative;
+    border-bottom: 1px dashed var(--border);
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .feature-list li:last-child { border-bottom: none; }
+  .feature-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    color: var(--gold);
+    font-size: 12px;
+  }
+  .scene-tag {
+    background: var(--gold-soft);
+    border-left: 4px solid var(--gold);
+    padding: 14px 18px;
+    border-radius: 4px;
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .scene-tag strong { color: var(--navy); display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: 0.1em; }
+  .price-tag {
+    display: inline-block;
+    background: var(--white);
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .price-tag strong { color: var(--gold); }
+  .tool-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+  .btn-try {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-try:hover {
+    background: var(--gold);
+    color: var(--navy-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(208,169,0,0.35);
+  }
+  .btn-try::after { content: '→'; transition: transform 0.25s ease; }
+  .btn-try:hover::after { transform: translateX(4px); }
+
+  /* ===== PACK SUMMARY ===== */
+  .pack-summary {
+    background: linear-gradient(135deg, var(--gold-soft) 0%, var(--bg-warm) 100%);
+    border: 2px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .pack-summary h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .pack-prices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+  }
+  .original-price {
+    font-size: 18px;
+    color: var(--text-soft);
+    text-decoration: line-through;
+  }
+  .arrow-icon { color: var(--gold); font-size: 24px; }
+  .pack-price {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--navy);
+  }
+  .pack-price small { font-size: 16px; color: var(--text-light); font-weight: 500; }
+  .pack-note { font-size: 13px; color: var(--text-light); margin-top: 8px; }
+
+  /* ===== TIMELINE SECTION ===== */
+  .timeline { background: var(--bg-warm); }
+  .timeline-list {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    bottom: 20px;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--gold), var(--navy));
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 50px;
+  }
+  .timeline-marker {
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    width: 36px;
+    height: 36px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+  .timeline-month {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .timeline-headline {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .timeline-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .timeline-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+  .timeline-row:not(:last-child) { border-bottom: 1px dashed var(--border); }
+  .row-label {
+    background: var(--navy);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+  }
+  .row-label.client { background: var(--gold); color: var(--navy-dark); }
+  .row-text { font-size: 14px; line-height: 1.7; }
+
+  .results-summary {
+    background: var(--white);
+    border: 2px dashed var(--gold);
+    border-radius: var(--radius);
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .results-summary h4 {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--navy);
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .result-item {
+    padding: 16px;
+    border-right: 1px solid var(--border);
+  }
+  .result-item:last-child { border-right: none; }
+  .result-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .result-label { font-size: 12px; color: var(--text-light); }
+  .disclaimer {
+    font-size: 11px;
+    color: var(--text-soft);
+    margin-top: 16px;
+    font-style: italic;
+  }
+
+  /* ===== FAQ SECTION ===== */
+  .faq { background: var(--white); }
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .faq-q {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-left: 36px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .faq-q::before {
+    content: 'Q';
+    position: absolute;
+    left: 0; top: -2px;
+    background: var(--navy);
+    color: var(--gold);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .faq-a {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.8;
+    padding-left: 36px;
+    position: relative;
+  }
+  .faq-a::before {
+    content: 'A';
+    position: absolute;
+    left: 0; top: -2px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  /* ===== FINAL CTA ===== */
+  .final-cta {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 90px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(208,169,0,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .final-cta-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+  .final-cta h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .final-cta h2 .accent { color: var(--gold); }
+  .final-cta p {
+    font-size: 15px;
+    opacity: 0.85;
+    margin-bottom: 36px;
+    line-height: 1.9;
+  }
+  .closing-message {
+    margin-top: 50px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    line-height: 2;
+    opacity: 0.9;
+  }
+  .closing-message .motto {
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 14px;
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 36px 20px;
+    font-size: 13px;
+    line-height: 1.9;
+  }
+  footer strong { color: var(--gold); font-size: 15px; letter-spacing: 0.05em; }
+  footer a { color: var(--white); text-decoration: underline; opacity: 0.8; }
+  footer a:hover { opacity: 1; color: var(--gold); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 880px) {
+    section { padding: 60px 20px; }
+    .scenes { grid-template-columns: 1fr; }
+    .tool-card,
+    .tool-card:nth-child(even) {
+      grid-template-columns: 1fr;
+      padding: 28px 22px;
+      gap: 28px;
+    }
+    .tool-card:nth-child(even) .tool-visual { order: 0; }
+    .timeline-list::before { left: 18px; }
+    .timeline-item { padding-left: 60px; }
+    .timeline-marker { left: 2px; width: 32px; height: 32px; font-size: 13px; }
+    .results-grid { grid-template-columns: 1fr; gap: 0; }
+    .result-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .result-item:last-child { border-bottom: none; }
+    .flow-step { font-size: 15px; padding: 12px 22px; }
+    .flow-arrow { transform: rotate(90deg); }
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-inner > * { animation: fadeUp 0.8s ease both; }
+  .hero-badge { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.25s; }
+  .hero-lead { animation-delay: 0.4s; }
+  .hero-cta { animation-delay: 0.55s; }
+  .hero-trust { animation-delay: 0.7s; }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">税理士事務所のための新しい標準装備</span>
+    <h1>
+      数字を、<span class="accent">経営助言</span>に変える<br>
+      3つの相棒。
+      <span class="small">読む　→　見通す　→　処方する</span>
+    </h1>
+    <p class="hero-lead">
+      「特に問題ありません」では、もう通用しない時代へ。<br>
+      AIが、先生の経営助言力を3倍にします。
+    </p>
+    <div class="hero-cta">
+      <a href="#tools" class="btn btn-primary">3アプリを無料で試す</a>
+      <a href="#contact" class="btn btn-outline">導入相談する</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">税理士事務所3社で導入実績</div>
+      <div class="trust-item">累計60アプリの「みっけシリーズ」</div>
+      <div class="trust-item">考えるを、ひとりにしない by SPC</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section class="problem">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">PROBLEM</span>
+      <h2 class="section-title">先生、こんな瞬間ありませんか？</h2>
+      <p class="section-subtitle">日々の業務で、ふと立ち止まるあの感覚。きっと、思い当たる節があるはずです。</p>
+    </div>
+
+    <div class="scenes">
+      <div class="scene-card">
+        <span class="scene-num">SCENE 01</span>
+        <h3 class="scene-title">月次面談中</h3>
+        <div class="dialogue">
+          <div class="speech">
+            <span class="speech-name">顧問先</span>
+            資金繰り、大丈夫ですかね…？
+          </div>
+          <div class="speech inner-thought">
+            <span class="speech-name">先生（心の声）</span>
+            う…即答できない。
+          </div>
+          <div class="speech inner-thought">
+            <span class="speech-name">顧問先（心の声）</span>
+            やっぱり聞いても無駄か…
+          </div>
+        </div>
+      </div>
+
+      <div class="scene-card">
+        <span class="scene-num">SCENE 02</span>
+        <h3 class="scene-title">所内ミーティング</h3>
+        <div class="dialogue">
+          <div class="speech">
+            <span class="speech-name">若手税理士</span>
+            ChatGPTで試算表を分析させてみたんですが、結構いい感じで…
+          </div>
+          <div class="speech inner-thought">
+            <span class="speech-name">所長（心の声）</span>
+            うちの強みは、何だ…？
+          </div>
+        </div>
+      </div>
+
+      <div class="scene-card">
+        <span class="scene-num">SCENE 03</span>
+        <h3 class="scene-title">契約更新の電話</h3>
+        <div class="dialogue">
+          <div class="speech">
+            <span class="speech-name">顧問先</span>
+            先生、来期から月額もう少し下げてもらえますか…？
+          </div>
+          <div class="speech inner-thought">
+            <span class="speech-name">先生（心の声）</span>
+            また値下げ交渉…。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-conclusion">
+      <p>
+        数字は読めても、<span class="highlight">助言ができない</span>。<br>
+        その壁を、<span class="highlight">たった3つのアプリ</span>が壊します。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY FLOW ===== -->
+<div class="story-flow">
+  <div class="flow-steps">
+    <div class="flow-step"><span class="step-num">1</span>読む</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step"><span class="step-num">2</span>見通す</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step"><span class="step-num">3</span>処方する</div>
+  </div>
+</div>
+
+<!-- ===== TOOLS ===== -->
+<section class="tools" id="tools">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">3 PARTNERS</span>
+      <h2 class="section-title">先生の月次面談を生まれ変わらせる、<br>3つのAIツール。</h2>
+      <p class="section-subtitle">単体でも使える。組み合わせると、もっと深くなる。</p>
+    </div>
+
+    <!-- TOOL 1 -->
+    <div class="tool-card">
+      <div class="tool-visual">
+        <span class="tool-icon">📖</span>
+        <div class="tool-role">PARTNER 01　／　読む</div>
+        <h3 class="tool-name">試算みっけ</h3>
+        <p class="tool-tagline">試算表を、経営の物語に翻訳する。</p>
+      </div>
+      <div class="tool-content">
+        <div class="tool-eyebrow">FOR THE FIRST 3 MINUTES</div>
+        <h3>月次面談の冒頭3分で、顧問先の表情が変わる。</h3>
+        <ul class="feature-list">
+          <li>試算表データを入力するだけで、AIが経営状態を診断</li>
+          <li>「先月との変化」「業界比較」「危険信号」を自動抽出</li>
+          <li>顧問先に見せながら3分で説明できる解説文を生成</li>
+        </ul>
+        <div class="scene-tag">
+          <strong>使うシーン</strong>
+          月次面談の冒頭3分。「ここが改善、ここが要注意」と即話せる。「先生、よく見てくれてますね」が引き出せる第一の相棒。
+        </div>
+        <div class="tool-actions">
+          <div class="price-tag">月額 <strong>¥2,980</strong>〜</div>
+          <a href="https://spc-jp.github.io/shisan-mikke/" class="btn-try" target="_blank" rel="noopener">試算みっけを試す</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOL 2 -->
+    <div class="tool-card">
+      <div class="tool-content">
+        <div class="tool-eyebrow">PREVENT BANKRUPTCY</div>
+        <h3>「先生、来月の資金が…」の前に、先生から切り出せる。</h3>
+        <ul class="feature-list">
+          <li>月次の資金繰りをAIが先読みシミュレーション</li>
+          <li>「○月にショート可能性あり」を事前にアラート</li>
+          <li>銀行融資の相談タイミングまで提案</li>
+        </ul>
+        <div class="scene-tag">
+          <strong>使うシーン</strong>
+          四半期に1度の経営レビュー。資金ショートを未然に察知し、銀行同行支援につなげる。「先生がいなかったら危なかった」を生む第二の相棒。
+        </div>
+        <div class="tool-actions">
+          <div class="price-tag">月額 <strong>¥2,980</strong>〜</div>
+          <a href="https://spc-jp.github.io/shikin-simulator/" class="btn-try" target="_blank" rel="noopener">資金繰りシミュレーターを試す</a>
+        </div>
+      </div>
+      <div class="tool-visual">
+        <span class="tool-icon">🔮</span>
+        <div class="tool-role">PARTNER 02　／　見通す</div>
+        <h3 class="tool-name">資金繰り<br>シミュレーター</h3>
+        <p class="tool-tagline">黒字倒産を、未然に防ぐ。</p>
+      </div>
+    </div>
+
+    <!-- TOOL 3 -->
+    <div class="tool-card">
+      <div class="tool-visual">
+        <span class="tool-icon">💊</span>
+        <div class="tool-role">PARTNER 03　／　処方する</div>
+        <h3 class="tool-name">経営健康<br>診断アプリ</h3>
+        <p class="tool-tagline">会社の健康状態を、A〜Eで見える化。</p>
+      </div>
+      <div class="tool-content">
+        <div class="tool-eyebrow">ANNUAL CHECKUP</div>
+        <h3>決算面談が「来期計画会議」に進化する。</h3>
+        <ul class="feature-list">
+          <li>簡単な質問に答えるだけで、会社の健康状態を診断</li>
+          <li>「収益性／安全性／成長性」を図で可視化</li>
+          <li>改善ポイントを3つに絞って具体提案</li>
+        </ul>
+        <div class="scene-tag">
+          <strong>使うシーン</strong>
+          年1回の決算後ミーティング。「来期の経営方針」が描ける。「来期も先生にお願いします」が自然と出てくる第三の相棒。
+        </div>
+        <div class="tool-actions">
+          <div class="price-tag">月額 <strong>¥2,980</strong>〜</div>
+          <a href="https://spc-jp.github.io/keiei-shindan/" class="btn-try" target="_blank" rel="noopener">経営健康診断アプリを試す</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACK SUMMARY -->
+    <div class="pack-summary">
+      <h3>3アプリパック価格でご提供</h3>
+      <p style="color: var(--text-light); font-size: 14px;">単体購入よりもお得な、税理士事務所専用の3点セット価格。</p>
+      <div class="pack-prices">
+        <div class="original-price">通常 月額 ¥8,940</div>
+        <span class="arrow-icon">→</span>
+        <div class="pack-price">¥7,980<small>／月（税抜）</small></div>
+      </div>
+      <p class="pack-note">※ 月単位で解約可能・最低契約期間なし</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="timeline">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">CASE STORY</span>
+      <h2 class="section-title">ある税理士事務所の、3ヶ月の変化。</h2>
+      <p class="section-subtitle">所長と顧問先の関係性が、月ごとに深くなっていく様子をご覧ください。</p>
+    </div>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="timeline-marker">1</div>
+        <div class="timeline-month">MONTH 1</div>
+        <h3 class="timeline-headline">試算みっけ 導入</h3>
+        <div class="timeline-card">
+          <div class="timeline-row">
+            <span class="row-label">所長</span>
+            <span class="row-text">月次面談で『先月比』が話せるようになった。数字の変化を、経営の言葉で説明できる。</span>
+          </div>
+          <div class="timeline-row">
+            <span class="row-label client">顧問先</span>
+            <span class="row-text">先生、最近よく見てくれてますね。安心して任せられます。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">2</div>
+        <div class="timeline-month">MONTH 2</div>
+        <h3 class="timeline-headline">資金繰りシミュレーター 追加</h3>
+        <div class="timeline-card">
+          <div class="timeline-row">
+            <span class="row-label">所長</span>
+            <span class="row-text">3社の資金ショートを事前察知。銀行融資の相談に繋がり、お客様から感謝された。</span>
+          </div>
+          <div class="timeline-row">
+            <span class="row-label client">顧問先</span>
+            <span class="row-text">先生がいなかったら危なかったです。本当に助かりました。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">3</div>
+        <div class="timeline-month">MONTH 3</div>
+        <h3 class="timeline-headline">経営健康診断アプリ 追加</h3>
+        <div class="timeline-card">
+          <div class="timeline-row">
+            <span class="row-label">所長</span>
+            <span class="row-text">決算面談が『来期計画会議』に進化した。MAS監査顧問契約への発展も見えてきた。</span>
+          </div>
+          <div class="timeline-row">
+            <span class="row-label client">顧問先</span>
+            <span class="row-text">来期も先生にお願いします。むしろ、もっと深く関わってほしいです。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-summary">
+      <h4>3ヶ月後の成果サマリー</h4>
+      <div class="results-grid">
+        <div class="result-item">
+          <span class="result-num">0</span>
+          <span class="result-label">顧問契約 解約率</span>
+        </div>
+        <div class="result-item">
+          <span class="result-num">3社</span>
+          <span class="result-label">MAS監査へのアップセル</span>
+        </div>
+        <div class="result-item">
+          <span class="result-num">×1.3</span>
+          <span class="result-label">顧問料 平均アップ率</span>
+        </div>
+      </div>
+      <p class="disclaimer">※ 上記はSPCの想定モデルケース。実証データは導入後に蓄積予定。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">よくあるご質問</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">PCが苦手な所長でも使えますか？</p>
+        <p class="faq-a">ブラウザだけで動きます。インストール不要、ID／パスワードのみで起動。スマホからもご利用いただけます。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">顧客情報を入れて大丈夫ですか？</p>
+        <p class="faq-a">「匿名化くん」（別アプリ）との併用を推奨しています。SPCがセキュアな運用設計をサポートしますので、ご安心ください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">顧問先に「これAIで作ったの？」と言われませんか？</p>
+        <p class="faq-a">AIはあくまで下書きです。先生の言葉で語ることが前提のツール設計になっています。最終的に語るのは、先生ご自身です。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">解約はいつでもできますか？</p>
+        <p class="faq-a">月単位で解約可能です。最低契約期間はありません。お試しいただいて合わなければ、いつでも止められます。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">顧問先に転売（再販）してもいいですか？</p>
+        <p class="faq-a">別途「士業パートナー契約」（月額¥19,800／30:70収益分配）にてご案内可能です。詳細は資料請求からどうぞ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="contact">
+  <div class="final-cta-inner">
+    <h2>
+      先生の知見と、AIの計算力。<br>
+      その<span class="accent">掛け算</span>を、始めませんか。
+    </h2>
+    <p>
+      まずは3アプリを実際に触ってみてください。<br>
+      導入前のご相談・士業パートナー資料請求も承っております。
+    </p>
+    <div class="hero-cta">
+      <a href="#tools" class="btn btn-primary">3アプリを無料で試す</a>
+      <a href="https://spc-jp.github.io/mikke-catalog-contact/" class="btn btn-outline" target="_blank" rel="noopener">士業パートナー資料を請求</a>
+    </div>
+
+    <div class="closing-message">
+      <span class="motto">考えるを、ひとりにしない。</span>
+      先生の知見と、AIの計算力。<br>
+      その掛け算が、顧問先の未来を変えます。
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <strong>Smile Plus Consulting</strong><br>
+  「中小企業の宝探し」考えるを、ひとりにしない<br>
+  <a href="https://spc-jp.github.io/mikke-catalog-contact/" target="_blank" rel="noopener">お問い合わせ</a>　／　
+  <a href="https://spc-jp.github.io/mikke-catalog/" target="_blank" rel="noopener">みっけシリーズ全カタログ</a><br>
+  &copy; Smile Plus Consulting All Rights Reserved.
+</footer>
+
+</body>
+</html>
